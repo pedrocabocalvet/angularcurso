@@ -1,0 +1,19 @@
+<html ng-app="helloWorldApp">
+	<head>
+		<meta charset="UTF-8"/>
+	<script src="angular.min.js"></script>
+	<script src="app.js"></script>
+
+	</head>
+	<body up>
+		<div ng-controller="HelloController" ng-init="cargarValores()">
+
+			<p>
+				Media:
+			</p>
+			<p>
+				{{obtenerMedia()}}
+			</p>
+		</div>
+	</body>
+</html>

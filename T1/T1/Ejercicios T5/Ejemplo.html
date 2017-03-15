@@ -1,0 +1,28 @@
+<html ng-app="helloWorldApp">
+	<head>
+		<meta charset="UTF-8"/>
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+
+	</head>
+	<body up>
+		<div ng-controller="HelloController">
+			  <table>
+				 <thead>
+				  <tr>
+				     <th>value</th>
+				     <th>value</th>
+				  </tr>
+				 </thead>
+
+				 <tbody>
+				  <tr ng-repeat="value in values">
+				     <td>{{ value }}</td>
+				     <td>{{ value }}</td>
+				  </tr>
+				 </tbody>
+
+				</table> 
+		</div>
+	</body>
+</html>

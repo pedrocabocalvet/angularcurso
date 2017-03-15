@@ -1,0 +1,7 @@
+ 
+{
+	"titulo": "Hello World",
+	"descripcion": "Description",
+	"mail": "Email",
+	"saludo": "Good day UK %nombre"
+}

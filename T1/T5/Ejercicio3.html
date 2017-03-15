@@ -1,0 +1,57 @@
+<html ng-app="myApp">
+<head>
+	<title></title>
+	<meta charset="utf8" />
+	<script src="https://code.angularjs.org/1.3.15/angular.js"></script>
+	<script src="app3.js"></script>
+	<style>
+		.numero {
+			background-color: gray;
+			border-radius: 5px;
+			padding: 3px;
+		}
+		.verde {
+			background-color: green;
+		}
+	</style>
+	</head>
+
+	<body>
+		<ol>
+			<li ng-repeat="val in [1,2,3,4,5]">
+				<span class="numero" ng-class="{'verde': $odd}">
+					{{val}}
+				</span>
+			</li>
+		</ol>
+		<ol>
+			<li ng-repeat="val in [1,2,3,4,5]">
+				<span class="numero" ng-class="{'verde': $event}">
+					{{val}}
+				</span>
+			</li>
+		</ol>
+		<ol>
+			<li ng-repeat="val in [1,2,3,4,5]">
+				<span class="numero" ng-class="{'verde': $first}">
+					{{val}}
+				</span>
+			</li>
+		</ol>
+		<ol>
+			<li ng-repeat="val in [1,2,3,4,5]">
+				<span class="numero" ng-class="{'verde': $last}">
+					{{val}}
+				</span>
+			</li>
+		</ol>
+		<ol>
+			<li ng-repeat="val in [1,2,3,4,5]">
+				<span class="numero" ng-class="{'verde': $middle}">
+					{{val}}
+				</span>
+			</li>
+		</ol>
+	</body>
+
+</html>

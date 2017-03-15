@@ -1,0 +1,33 @@
+<html ng-app="myApp">
+	<head>
+		<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.4.6/angular-locale_es-419.min.js"></script>		
+		<script src="app2b.js"></script>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+			</br>
+			EJERCICIO 1
+
+			<div ng-controller="CalculadoraController">
+				<div ng-if="messageError" style="background-color:red">Error: {{messageError}}</div>
+				</br>
+				Introduce un número
+				<input type="number" ng-model="num">
+				</br>
+				<button ng-click="asignarOperando('+')" ng-disabled="!disableBtResult || disableAllBt">+</button>
+				<button ng-click="asignarOperando('-')" ng-disabled="!disableBtResult ||  disableAllBt">-</button>
+				<button ng-click="asignarOperando('x2')" ng-disabled="!disableBtResult ||  disableAllBt">X<sup>2</sup></button>
+				<button ng-click="asignarOperando('x3')" ng-disabled="!disableBtResult ||  disableAllBt">X<sup>3</sup></button>
+				</br>
+				<button ng-click="clear()">Clear</button>
+				<button ng-click="calcularResultado()" ng-disabled="disableBtResult || disableAllBt">Resultado</button>
+				<div>Operando1: {{v1}}</div>
+				<div ng-if="op">Operacion: {{op}}</div>
+				<div ng-if="v2">Operando2: {{v2}}</div>
+				<div>Resultado: {{resultado}}</div>
+			</div>
+
+	</body>
+</html>

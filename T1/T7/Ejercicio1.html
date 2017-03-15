@@ -1,0 +1,49 @@
+<html ng-app="app">
+	<head>
+		<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.4.6/angular-locale_es-419.min.js"></script>		
+		<script src="app1.js"></script>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<div ng-controller="PeliculasController">
+			<input type="text" ng-model="filtro">
+			<table>
+				<thhead>
+					<tr>
+						<th ng-click="selectOrder('name');">Nombre</th>
+						<th ng-click="selectOrder('year');">Año</th>
+						<th ng-click="selectOrder('oscar');">Oscar</th>
+					</tr>
+				</thhead>
+				<tbody>
+					<tr ng-repeat="peli in peliculas | filter: filtro | orderBy: order: reverse ">
+						<td ng-bind="peli.name"></td>
+						<td ng-bind="peli.year"></td>
+						<td ng-bind="peli.oscar"></td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			</br>
+			EJERCICIO 2
+			<span>{{ 'hola' | envolver: '***' }}</span>
+
+			</br>
+			</br>
+			<span>{{ 'hola' | envolver: '\u263A' }}</span>
+
+			</br>
+			</br>
+			<span>{{ 'hola' | envolver: '\u263A' | envolver: '\u263A' | envolver: '\u263A' }}</span>
+
+			</br>
+			EJERCICIO 3
+			<span>{{ 'final' | envolver: '' }}</span>
+
+		</div>
+
+	</body>
+</html>

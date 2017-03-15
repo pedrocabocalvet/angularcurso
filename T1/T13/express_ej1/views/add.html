@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Elementos</title>
+	</head>
+	<body>
+		<!--
+		{% for nombre in nombres %}
+		{% if loop.first %}<ol>{% endif %}
+		<li>{{ nombre }}</li>
+		{% if loop.last %}</ol>{% endif %}
+		{% endfor %}-->
+
+		{% for elemento in elementos %}
+		{% if loop.first %}<ol>{% endif %}
+		<li>{{ elemento.name }}</li>
+		{% if loop.last %}</ol>{% endif %}
+		{% endfor %}
+	</body>
+</html>

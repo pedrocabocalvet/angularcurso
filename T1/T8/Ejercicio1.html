@@ -1,0 +1,43 @@
+<html ng-app="app">
+	<head>
+		<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>	
+		<script src="app1.js"></script>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<div ng-controller="ejerciciosController">
+			EJERCICIO 1
+			</br>
+			<em mensaje="{caracter:'**', texto:'Hola Mundo'}"></em>
+
+			</br>
+			EJERCICIO 2
+			</br>
+			<span elimina-letra="o">Hola Mundo</span>
+
+			</br>
+			EJERCICIO 3
+			</br>
+			<span descuento="10"></span>
+
+			</br>
+			EJERCICIO 4
+			</br>
+			<factorial numero="3"></factorial>
+
+			</br>
+			EJERCICIO 5
+			</br>
+			<div>
+				<ul>
+					<listar-tareas ></>
+				</ul>
+				<button ng-click="eliminarTareas()">Eliminar</button>
+
+				<input type="text" ng-model="description">
+				<button ng-click="addTarea()">Añadir</button>
+			</div>
+		</div>
+	</body>
+</html>
