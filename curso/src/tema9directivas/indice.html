@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="modulo.js"></script>
+    <script src="directiva.js"></script>
+  </head>
+  <body ng-app="myApp" ng-controller="controlador">
+    <h1>{{variable}} como estas?</h1>
+    <button ng-click="holaMundo()">boton</button>
+
+<!-- estas son las directivas creadas en directiva.js los atributos los podremos recuperar en la funcion link -->
+    <my-directive atributoUno="soy el atributo uno"></my-directive>
+    <my-directive atributoDos="soy el atributo dos"></my-directive>
+    <my-directive atributoTres="soy el atributo tres"></my-directive>
+
+    <!-- si en el restrict pusiera a en directiva.js seria asi -> <p my-directive>hola</p>  -->
+
+
+  </body>
+</html>

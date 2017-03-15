@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="myApp.js"></script>
+
+
+  </head>
+  <body ng-controller="SettingsController1">
+    <h1>hola</h1>
+  <label>nombre</label><input type="text" ng-model="name"></input>
+  <label>surname</label>  <input type="text" ng-model="surname"></input>
+  <!-- el ng-cloack es para que no salga el mustache hasta que no este cargado el archivo de angular -->
+    <p ng-cloack>{{name}}</p>
+    <p ng-cloack>{{surname}}</p>
+    <button type="button" ng-click="fullname()">boton</button>
+    <label>nombre completo</label>
+    <p ng-cloack>{{variable | uppercase}}</p>
+
+
+  </body>
+</html>

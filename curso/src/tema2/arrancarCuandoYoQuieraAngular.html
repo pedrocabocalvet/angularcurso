@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body id="app">
+    <input type="text" ng-model="name" />
+
+    <div>
+      Hola {{name}}
+    </div>
+    <div>
+      Hola {{::name}}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script>
+    <!-- aqui le decimos que no arranque bootstrap hasta que no le pongamos en consola de navegador el comando angular.resumeBootstrap() -->
+        window.name='NG_DEFER_BOOTSTRAP!';
+        angular.bootstrap(document.getElementById("app"))
+    </script>
+  </body>
+</html>

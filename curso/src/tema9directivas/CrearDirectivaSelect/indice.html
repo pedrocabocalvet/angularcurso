@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="modulo.js"></script>
+    <script src="directiva.js"></script>
+
+  </head>
+  <body ng-app="myApp" ng-controller="controlador">
+    <h1>{{variable}} como estas?</h1>
+
+    <select name="repeatSelect" id="repeatSelect" ng-model="model">
+      <option ng-repeat="user in users" value="{{user}}">{{user}}</option>
+    </select>
+
+    <my-select model="model" collection="users"></my-select>
+
+    <p>{{model}}</p>
+</html>
